@@ -9,6 +9,7 @@ window.onscroll = function () {
 
 window.onload = function () {
 	scrollFunction();
+	setStats();
 };
 
 function scrollFunction() {
@@ -196,4 +197,34 @@ function scrollFunctionBTT() {
 function topFunction() {
 	document.body.scrollTop = 0; // for Safari
 	document.documentElement.scrollTop = 0; // for Chrome, Firefox, IE and Opera
+}
+
+// Handle download
+let downloadA = document.querySelectorAll('a.download-btn');
+downloadA.forEach((el)=>{
+	el.onclick = ()=>{
+		el.download = true;
+		el.filename = 'pinocchio_1.3.txt'
+		el.href = '/app/latest.txt';
+		el.click();
+	}
+}) 
+
+
+// Update statistics
+function setStats() {
+	window.pine = {
+		server: "https://api-pinocchio.cyclic.app", 
+		API_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjc5MDg0MDU4LCJleHAiOjE2ODE2NzYwNTh9.9mhuvLYXUX-9owGk9Unc87I9VBmY2V-AUJYFDt147fs"
+	}
+	window.pine.fetch = axios.create({baseUrl: window.pine.server}), 
+	window.pine.fetch.defaults.headers.common['Authorization'] = `Bearer ${window.pine.API_KEY}`; 
+	
+	window.pine.fetch.get('https://api-pinocchio.cyclic.app/core/stats').then((res)=>{
+		let stats = res.data;
+		
+		document.querySelector('#user-counter').setAttribute('data-purecounter-end', stats.users);
+		document.querySelector('#post-counter').setAttribute('data-purecounter-end', stats.posts);
+		document.querySelector('#comment-counter').setAttribute('data-purecounter-end', stats.comments);
+	})
 }

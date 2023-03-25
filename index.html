@@ -40,13 +40,13 @@
                 <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.png" alt="alternative"></a> 
 
                 <!-- Text Logo - Use this if you don't have a graphic logo -->
-                <!-- <a class="navbar-brand logo-text" href="index.html">Leno</a> -->
+                <!-- <a class="navbar-brand logo-text" href="index.html">Pinocchio</a> -->
 
-                <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+                <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation" hidden>
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault" style="display: none;">
+                <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
                     <ul class="navbar-nav ms-auto navbar-nav-scroll">
                         <li class="nav-item">
                             <a class="nav-link" href="#header">Home</a>
@@ -103,7 +103,7 @@
                             <h1 class="h1-large">SHARE <span class="replace-me">CODES, AUDIO, E-BOOK</span> <br> ON FACEBOOK</h1>
                             <p class="p-large">What if you could share code snippets on Facebook?. What endless possibilities would that bring</p>
                             <a hidden class="btn-solid-lg" href="#your-link"><i class="fab fa-apple"></i>For Apple</a>
-                            <a class="btn-solid-lg" href="#your-link"><i class="fab fa-app" hidden></i>For Android</a>
+                            <a class="btn-solid-lg download-btn"><i class="fab fa-app" hidden></i>For Android</a>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
                     <div class="col-lg-6">
@@ -169,7 +169,7 @@
                     <!-- Tabs Links -->
                     <ul class="nav nav-tabs" id="navTabs" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="nav-tab-1" data-bs-toggle="tab" data-bs-target="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-cog"></i>CONFIGURING</a>
+                            <a class="nav-link active" id="nav-tab-1" data-bs-toggle="tab" data-bs-target="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-cog"></i>SETUP</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="nav-tab-2" data-bs-toggle="tab" data-bs-target="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false"><i class="fas fa-binoculars"></i>TRACKING</a>
@@ -576,35 +576,35 @@
                                 </div> <!-- end of image-container -->
                             </div> <!-- end of col -->
                             <div class="col-lg-4">
-                                <h3>Goals Setting</h3>
+                                <h3>How it Works</h3>
                                 <hr>
-                                <p>In gravida at nunc sodales pretium. Vivamus semper, odio vitae mattis auctor, elit elit semper magna ac tum nico vela spider</p>
-                                <h4>User Feedback</h4>
-                                <p>Sapien vitae eros. Praesent ut erat a tellus posuere nisi more thico cursus pharetra finibus posuere nisi. Vivamus feugiat</p>
+                                <p>Pinocchio works using similar principles as AR. It can be seen as AR for Facebook.</p>
+                                <h4>Creating a Post</h4>
+                                <p>This outlines the minimal steps required to create a Pinocchio Post. It's super easy !!</p>
                                 <ul class="list-unstyled li-space-lg">
                                     <li class="d-flex">
                                         <i class="fas fa-chevron-right"></i>
-                                        <div class="flex-grow-1">Tincidunt sem vel brita bet mala</div>
+                                        <div class="flex-grow-1">Select the Pine you'd like to use</div>
                                     </li>
                                     <li class="d-flex">
                                         <i class="fas fa-chevron-right"></i>
-                                        <div class="flex-grow-1">Sapien condimentum sacoz sil necr</div>
+                                        <div class="flex-grow-1">Fill in the necessary details in the bottomsheet that appears</div>
                                     </li>
                                     <li class="d-flex">
                                         <i class="fas fa-chevron-right"></i>
-                                        <div class="flex-grow-1">Fusce interdum nec ravon fro urna</div>
+                                        <div class="flex-grow-1">Click "Share". This will copy some text to your clipboard</div>
                                     </li>
                                     <li class="d-flex">
                                         <i class="fas fa-chevron-right"></i>
-                                        <div class="flex-grow-1">Integer pulvinar biolot bat tortor</div>
+                                        <div class="flex-grow-1">Paste the text into the Facebook post screen, express yourself</div>
                                     </li>
                                     <li class="d-flex">
                                         <i class="fas fa-chevron-right"></i>
-                                        <div class="flex-grow-1">Id ultricies fringilla fangor raq trinit</div>
+                                        <div class="flex-grow-1">Hit the "Post" button</div>
                                     </li>
                                 </ul>
-                                <a id="modalCtaBtn" class="btn-solid-reg" href="#your-link">Details</a>
-                                <button type="button" class="btn-outline-reg" data-bs-dismiss="modal">Close</button>
+                                <!-- <a id="modalCtaBtn" class="btn-solid-reg" data-bs-dismiss="modal" href="#download">Download</a> -->
+                                <button type="button" class="btn-solid-reg" data-bs-dismiss="modal">Close</button>
                             </div> <!-- end of col -->
                         </div> <!-- end of row -->
                     </div> <!-- end of modal-content -->
@@ -622,7 +622,7 @@
                         <div class="text-container">
                             <h2>Pines are the basis of our Project</h2>
                             <p>Imagine Pines as apps that extend Facebook's sharing capability. Pines run on Pinocchio, you too can create your own Pine</p>
-                            <a class="btn-solid-reg" href="#your-link">Details</a>
+                            <a class="btn-solid-reg" href="#download">Download</a>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
                     <div class="col-lg-6">
@@ -644,22 +644,22 @@
                         
                         <!-- Counter -->
                         <div class="counter-container">
-                            <div class="counter-cell">
+                            <div class="counter-cell" id="user-counter">
                                 <i class="fas fa-users"></i>
                                 <div data-purecounter-start="0" data-purecounter-end="62" data-purecounter-duration="3" class="purecounter">1</div>
                                 <div class="counter-info">Pinochs</div>
                             </div> <!-- end of counter-cell -->
-                            <div class="counter-cell">
+                            <div class="counter-cell" id="post-counter">
                                 <i class="fas fa-code"></i>
                                 <div data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1.5" class="purecounter">1</div>
                                 <div class="counter-info">Pinocchio Posts</div>
                             </div> <!-- end of counter-cell -->
-                            <div class="counter-cell">
+                            <div class="counter-cell" id="comment-counter">
                                 <i class="fas fa-comments"></i>
                                 <div data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="3" class="purecounter">1</div>
                                 <div class="counter-info">Good Reviews</div>
                             </div> <!-- end of counter-cell -->
-                            <div class="counter-cell">
+                            <div class="counter-cell" >
                                 <i class="fas fa-rocket"></i>
                                 <div data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="3" class="purecounter">1</div>
                                 <div class="counter-info">Pines</div>
@@ -752,14 +752,14 @@
 
 
         <!-- Download -->
-        <div class="basic-4">
+        <div class="basic-4" id="download">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="text-container">
                             <h4>Download Pinocchio today to see the benefits and enjoy the results. It's the first of its kind</h4>
                             <a class="btn-solid-lg" href="#your-link" hidden><i class="fab fa-apple"></i>For iOS</a>
-                            <a class="btn-solid-lg" href="#your-link"><i class="fab fa-google-play"></i>For Android</a>
+                            <a class="btn-solid-lg download-btn"><i class="fab fa-google-play" hidden></i>For Android</a>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
                     <div class="col-lg-6">
@@ -792,30 +792,30 @@
                         </div> <!-- end of footer-col -->
                         <div class="footer-col third">
                             <span class="fa-stack">
-                                <a href="#your-link">
+                                <a href="https://www.facebook.com/ifedayooni.prince">
                                     <i class="fas fa-circle fa-stack-2x"></i>
                                     <i class="fab fa-facebook-f fa-stack-1x"></i>
                                 </a>
                             </span>
                             <span class="fa-stack">
-                                <a href="#your-link">
+                                <a href="mailto:ifedayoprince@gmail.com">
                                     <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-twitter fa-stack-1x"></i>
+                                    <i class="fa fa-envelope fa-stack-1x"></i>
                                 </a>
                             </span>
-                            <span class="fa-stack">
+                            <span class="fa-stack" hidden>
                                 <a href="#your-link">
                                     <i class="fas fa-circle fa-stack-2x"></i>
                                     <i class="fab fa-pinterest-p fa-stack-1x"></i>
                                 </a>
                             </span>
-                            <span class="fa-stack">
+                            <span class="fa-stack" hidden>
                                 <a href="#your-link">
                                     <i class="fas fa-circle fa-stack-2x"></i>
                                     <i class="fab fa-instagram fa-stack-1x"></i>
                                 </a>
                             </span>
-                            <p class="p-small">Send us a mail at <a href="mailto:contact@site.com"><strong>contact@site.com</strong></a></p>
+                            <p class="p-small" hidden>Send us a mail at <a href="mailto:ifedayoprince@gmail.com"><strong>ifedayoprince@gmail.com</strong></a></p>
                         </div> <!-- end of footer-col -->
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
@@ -848,6 +848,7 @@
         <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
         <script src="js/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
         <script src="js/replaceme.min.js"></script> <!-- ReplaceMe for rotating text -->
+		<script src="https://pino-sdk.vercel.app/utils/axios.min.js"></script>
         <script src="js/scripts.js"></script> <!-- Custom scripts -->
     </body>
 </html>
