@@ -222,9 +222,13 @@ function setStats() {
 	
 	window.pine.fetch.get('https://api-pinocchio.cyclic.app/core/stats').then((res)=>{
 		let stats = res.data;
+		// console.log(stats.users)
+		document.querySelector('#user-counter .purecounter').setAttribute('data-purecounter-end', stats.users);
+		document.querySelector('#post-counter .purecounter').setAttribute('data-purecounter-end', stats.posts);
+		document.querySelector('#comment-counter .purecounter').setAttribute('data-purecounter-end', stats.reviews);
 		
-		document.querySelector('#user-counter').setAttribute('data-purecounter-end', stats.users);
-		document.querySelector('#post-counter').setAttribute('data-purecounter-end', stats.posts);
-		document.querySelector('#comment-counter').setAttribute('data-purecounter-end', stats.comments);
+		// console.log(document.querySelector('#user-counter'))
+	}).catch((e)=>{
+		console.log(e)
 	})
 }
