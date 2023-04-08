@@ -159,7 +159,7 @@ var imageSlider = new Swiper('.image-slider', {
 var videoBtn = document.querySelector('.video-btn')
 var videoModal = document.getElementById('videoModal')
 var video = document.getElementById('video')
-var videoSrc
+var videoSrc;
 
 var checkVideoSrc = document.querySelector('.video-btn');
 if (checkVideoSrc !== null) { 
@@ -215,7 +215,7 @@ downloadA.forEach((el)=>{
 function setStats() {
 	window.pine = {
 		server: "https://api-pinocchio.cyclic.app", 
-		API_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjc5MDg0MDU4LCJleHAiOjE2ODE2NzYwNTh9.9mhuvLYXUX-9owGk9Unc87I9VBmY2V-AUJYFDt147fs"
+		API_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlBpbm9TdG9yZSIsImlhdCI6MTY3OTgyMzAzOSwiZXhwIjoxNjgyNDE1MDM5fQ.lsi0e7qbuAXpXNDcWu_hcqROp5JaNHVwyC4ckIRetRg"
 	}
 	window.pine.fetch = axios.create({baseUrl: window.pine.server}), 
 	window.pine.fetch.defaults.headers.common['Authorization'] = `Bearer ${window.pine.API_KEY}`; 
@@ -226,7 +226,8 @@ function setStats() {
 		document.querySelector('#user-counter .purecounter').setAttribute('data-purecounter-end', stats.users);
 		document.querySelector('#post-counter .purecounter').setAttribute('data-purecounter-end', stats.posts);
 		document.querySelector('#comment-counter .purecounter').setAttribute('data-purecounter-end', stats.reviews);
-		
+		document.querySelector('#starts-counter .purecounter').setAttribute('data-purecounter-end', stats.starts);
+
 		// console.log(document.querySelector('#user-counter'))
 	}).catch((e)=>{
 		console.log(e)
