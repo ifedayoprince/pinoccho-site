@@ -204,8 +204,8 @@ let downloadA = document.querySelectorAll('a.download-btn');
 downloadA.forEach((el)=>{
 	el.onclick = ()=>{
 		el.download = true;
-		el.filename = 'pinocchio_1.3.txt'
-		el.href = '/app/latest.txt';
+		el.filename = 'pinocchio-1.3.0.apk'
+		el.href = '/app/pinocchio-1.3.0.apk';
 		el.click();
 	}
 }) 
