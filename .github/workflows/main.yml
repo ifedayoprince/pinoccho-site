@@ -30,7 +30,7 @@ jobs:
 
         port: 21
         
-        server-dir: ./htdocs
+        server-dir: ./htdocs/
 
         password: ${{ secrets.FTP_PASSWORD }}
 
